@@ -20,7 +20,7 @@ h1,
  max-width: 50rem;
  font-family: 'Roboto', sans-serif;
  color: #fff;
- font-weight: 100;
+ font-weight: lighter;
 }
 .success,
 .error {
