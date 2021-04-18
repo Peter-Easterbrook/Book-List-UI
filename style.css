@@ -13,12 +13,13 @@ body {
   min-height: 100vh;
   overflow: hidden;
   margin: 0 auto;
-  background: rgb(228, 231, 235);
+  background: #000;
+/*   background: rgb(228, 231, 235);
   background: linear-gradient(
     360deg,
     rgba(228, 231, 235, 1) 0%,
     rgba(161, 172, 184, 1) 100%
-  );
+  ); */
 }
 h1,
 .form,
