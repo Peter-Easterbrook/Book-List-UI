@@ -14,13 +14,13 @@ body {
   overflow: hidden;
   margin: 0 auto;
 }
-h1,  
+h1,
 .form,
 .table {
- max-width: 50rem;
- font-family: 'Roboto', sans-serif;
- color: #fff;
- font-weight: lighter;
+  max-width: 50rem;
+  font-family: 'Roboto', sans-serif;
+  color: #fff;
+  font-weight: 100;
 }
 .success,
 .error {
@@ -38,4 +38,25 @@ h1,
 .error {
   background-color: #e10600;
   color: #fff;
+}
+#title,
+#author,
+#isbn {
+  font-size: 2rem;
+  border-radius: 50px;
+  box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+#submit {
+  background: rgb(0, 20, 42);
+  color: #fff;
+  font-weight: 100;
+  font-size: 1.5rem;
+  border-radius: 50px;
+  margin-top: 3rem;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+#submit:hover {
+  background: rgb(0, 123, 254);
+  color: #000;
 }
