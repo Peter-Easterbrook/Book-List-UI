@@ -22,6 +22,9 @@ h1,
   color: #fff;
   font-weight: 100;
 }
+.table {
+  max-width: 100rem;
+}
 .success,
 .error {
   max-width: 20rem;
@@ -43,8 +46,10 @@ h1,
   text-decoration: none;
 }
 #title,
-#author,
-#isbn {
+#address,
+#date,
+#time {
+  padding: 1rem;
   font-size: 2rem;
   border-radius: 50px;
   box-shadow: inset 0px 5px 10px 0px rgba(0, 0, 0, 0.5);

@@ -1,8 +1,9 @@
 class Book {
-  constructor(title, author, isbn) {
+  constructor(title, address, date, time) {
     this.title = title;
-    this.author = author;
-    this.isbn = isbn;
+    this.address = address;
+    this.date = date;
+    this.time = time;
   }
 }
 
@@ -14,8 +15,9 @@ class UI {
     // Insert cols
     row.innerHTML = `
         <td>${book.title}</td>
-        <td>${book.author}</td>
-        <td>${book.isbn}</td>
+        <td>${book.address}</td>
+        <td>${book.date}</td>
+        <td>${book.time}</td>
         <td><a href="#" class="delete">❌<a></td>
       `;
 
@@ -50,8 +52,9 @@ class UI {
 
   clearFields() {
     document.getElementById('title').value = '';
-    document.getElementById('author').value = '';
-    document.getElementById('isbn').value = '';
+    document.getElementById('address').value = '';
+    document.getElementById('date').value = '';
+    document.getElementById('time').value = '';
   }
 }
 
@@ -87,11 +90,11 @@ class Store {
     localStorage.setItem('books', JSON.stringify(books));
   }
 
-  static removeBook(isbn) {
+  static removeBook(time) {
     const books = Store.getBooks();
 
     books.forEach(function (book, index) {
-      if (book.isbn === isbn) {
+      if (book.time === time) {
         books.splice(index, 1);
       }
     });
@@ -107,11 +110,12 @@ document.addEventListener('DOMContentLoaded', Store.displayBooks);
 document.getElementById('book-form').addEventListener('submit', function (e) {
   // Get form values
   const title = document.getElementById('title').value,
-    author = document.getElementById('author').value,
-    isbn = document.getElementById('isbn').value;
+    address = document.getElementById('address').value,
+    date = document.getElementById('date').value,
+    time = document.getElementById('time').value;
 
   // Instantiate book
-  const book = new Book(title, author, isbn);
+  const book = new Book(title, address, date, time);
 
   // Instantiate UI
   const ui = new UI();
@@ -119,7 +123,7 @@ document.getElementById('book-form').addEventListener('submit', function (e) {
   console.log(ui);
 
   // Validate
-  if (title === '' || author === '' || isbn === '') {
+  if (title === '' || address === '' || date === '' || time === '') {
     // Error alert
     ui.showAlert('Please fill in all fields', 'error');
   } else {
