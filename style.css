@@ -39,6 +39,9 @@ h1,
   background-color: #e10600;
   color: #fff;
 }
+.delete {
+  text-decoration: none;
+}
 #title,
 #author,
 #isbn {
