@@ -35,8 +35,12 @@
     />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r124/three.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
-
-    <title>Book List UI</title>
+    <script
+      src="https://kit.fontawesome.com/93b32f94da.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <title>Todo List UI</title>
   </head>
   <body id="vantajs">
     <div class="container">
@@ -58,7 +62,9 @@
           <label for="time">Time</label>
           <input type="time" id="time" class="u-full-width" />
         </div>
-        <input type="submit" value="Submit" id="submit" class="u-full-width" />
+        <button type="submit" value="Submit" id="submit" class="u-full-width">
+          <i class="fas fa-paper-plane"></i>
+        </button>
       </form>
       <table class="u-full-width table">
         <thead>
@@ -67,7 +73,7 @@
             <th>Address</th>
             <th>Date</th>
             <th>Time</th>
-            <th>X</th>
+            <th><i class="fas fa-trash-alt"></i></th>
           </tr>
         </thead>
         <tbody id="book-list"></tbody>
