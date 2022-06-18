@@ -26,7 +26,6 @@
       href="favicon/safari-pinned-tab.svg"
       color="#5bbad5"
     />
-    <link rel="stylesheet" type="text/css" href="style.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
@@ -40,6 +39,7 @@
       crossorigin="anonymous"
       defer
     ></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <title>Todo List UI</title>
   </head>
   <body id="vantajs">
@@ -62,7 +62,7 @@
           <label for="time">Time</label>
           <input type="time" id="time" class="u-full-width" />
         </div>
-        <button type="submit" value="Submit" id="submit" class="u-full-width">
+        <button type="submit" id="submit" class="u-full-width">
           <i class="fas fa-paper-plane"></i>
         </button>
       </form>
@@ -73,7 +73,7 @@
             <th>Address</th>
             <th>Date</th>
             <th>Time</th>
-            <th><i class="fas fa-trash-alt"></i></th>
+            <th class="trash"><i class="fas fa-trash-alt"></i></th>
           </tr>
         </thead>
         <tbody id="book-list"></tbody>

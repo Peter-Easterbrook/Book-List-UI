@@ -14,12 +14,12 @@ class UI {
     const row = document.createElement('tr');
     // Insert cols
     row.innerHTML = `
-        <td>${book.title}</td>
-        <td>${book.address}</td>
-        <td>${book.date}</td>
-        <td>${book.time}</td>
-        <td><a href="#" class="delete">❌<a></td>
-      `;
+      <td>${book.title}</td>
+      <td>${book.address}</td>
+      <td>${book.date}</td>
+      <td>${book.time}</td>
+      <td><a href="#" class="delete">X<a></td>
+    `;
 
     list.appendChild(row);
   }
@@ -123,7 +123,7 @@ document.getElementById('book-form').addEventListener('submit', function (e) {
   console.log(ui);
 
   // Validate
-  if (title === '' || address === '' || date === '' || time === '') {
+  if (title === '' || address === '' || time === '') {
     // Error alert
     ui.showAlert('Please fill in all fields', 'error');
   } else {
